@@ -1,0 +1,60 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Candidate.master.cs" Inherits="Online_Election_System.Candidate" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <link rel="stylesheet" href="~/MenuStyle.css">
+
+    <script type="text/javascript">
+        window.history.forward(-1);
+    </script>
+
+</head>
+<body>
+    <form id="form1" runat="server">
+
+        <div style="margin-left:10%; margin-right: 10%">
+
+            <div style="height:110px; background-color: black">
+
+                <div style="float:right; height:inherit; width:100px; color:white; font-size:15pt; text-align:center; padding-top:70px">
+                    <u><asp:HyperLink ID="logout" runat="server" NavigateUrl="Home.aspx">Log Out</asp:HyperLink></u>
+                </div>
+
+            </div>
+
+            
+            <div id='cssmenu'>
+                <ul>
+                    <li><a href='CandidateProfile.aspx'> Profile</a></li>
+                    <li class='has-sub'><a href='#'>Update</a>
+                        <ul>
+                            <li><a href='CandidateUpdateEmail.aspx'>Email</a></li>
+                            <li><a href='CandidateUpdateDetails.aspx'>Other Details</a></li>
+                        </ul>
+                    </li>
+                    <li><a href='CandidatesList.aspx' target="_blank">Candidates List</a></li>
+                    <li><a href='Results.aspx' target="_blank">Results</a></li>
+                </ul>
+            </div>
+            
+
+
+
+            <div>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <div style="height:110px; background-color:black; margin-top:3px">
+
+            </div>
+        </div>
+
+    </form>
+</body>
+</html>

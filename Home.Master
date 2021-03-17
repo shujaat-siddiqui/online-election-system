@@ -1,0 +1,59 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Home.Master.cs" Inherits="Online_Election_System.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <link rel="stylesheet" href="~/MenuStyle.css">
+
+</head>
+<body>
+    <form id="form1" runat="server">
+
+        <div style="margin-left:10%; margin-right: 10%">
+            <div style="height:110px; background-color: black">
+
+            </div>
+            
+            <div id='cssmenu'>
+                <ul>
+                    <li><a href='Home.aspx'>Home</a></li>
+                    <li class='has-sub'><a href='#'>Login</a>
+                        <ul>
+                            <li><a href='AdminLogin.aspx'>Admin</a></li>
+                            <li><a href='CandidateLogin.aspx'>Candidate</a></li>
+                            <li><a href='VoterLogin.aspx'>Voter</a></li>
+                        </ul>
+                    </li>
+                    <li class='has-sub'><a href='#'>Sign Up</a>
+                        <ul>                      
+                            <li><a href='SignupCandidate.aspx'>Candidate</a></li>
+                            <li><a href='SignupVoter.aspx'>Voter</a></li>
+                        </ul>
+                    </li>
+                    <li><a href='CandidatesList.aspx'>Candidates List</a></li>
+                    <li><a href='Results.aspx'>Results</a></li>
+                    <li><a href='About.aspx'>About Us</a></li>
+                    <li><a href='#'>Contact</a></li>
+                </ul>
+            </div>
+            
+
+
+
+            <div>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <div style="height:110px; background-color:black; margin-top:3px">
+
+            </div>
+        </div>
+      
+    </form>
+</body>
+</html>
